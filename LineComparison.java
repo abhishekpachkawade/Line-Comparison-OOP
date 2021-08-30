@@ -23,7 +23,8 @@ class LengthOfLine{
 		
 		//local variable 
         double x1,x2,y1,y2;
-        double lengthOfLine;
+        double a1,b1,a2,b2;
+        double lengthOfLine1, lengthOfLine2;
         
         //Print statement 
         System.out.println("Calculate the Length of Line");
@@ -51,10 +52,44 @@ class LengthOfLine{
         
         // store the user value
         y2= scan.nextInt();
+        
+        // Ask to user enter the value
+        System.out.println("Enter a1 coordinates:");
+        //scan the user value
+        a1= scan.nextInt();
+        
+        // Ask to user enter the value
+        System.out.println("Enter b1 coordinates:");
+        //scan the user value
+        b1= scan.nextInt();
+        
+        // Ask to user enter the value
+        System.out.println("Enter a2 coordinates:");
+        a2= scan.nextInt();
+        
+        // Ask to user enter the value
+        System.out.println("Enter b2 coordinates:");
+        b2= scan.nextInt();
         scan.close();
         
-        lengthOfLine = Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
-        System.out.println("The length of line is :"+lengthOfLine);
+        scan.close();
+        
+        lengthOfLine1 = Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
+        System.out.println("The length of line is :"+lengthOfLine1);
+        
+        //calculating Distance2
+        lengthOfLine2 = Math.sqrt((b2 - b1) * (b2 - b1) + (a2 - a1) * (a2 - a1));
+        
+     // printing the value of length of line is distance2
+        System.out.println("The length of line-2 is :"+ lengthOfLine2);
+        
+        //if else condition
+            if( lengthOfLine1 ==  lengthOfLine2){
+                System.out.println("The line lengths are equal");
+             }
+             else {
+                System.out.println("The line lengths are not equal");
+             }
 
 	}
 
@@ -66,14 +101,24 @@ class LengthOfLine{
  
 Calculate the Length of Line
 Enter X1 coordinates:
-4
-Enter Y1 coordinates:
 2
+Enter Y1 coordinates:
+5
 Enter X2 coordinates:
-6
+3
 Enter Y2 coordinates:
-1
+3
+Enter a1 coordinates:
+2
+Enter b1 coordinates:
+2
+Enter a2 coordinates:
+6
+Enter b2 coordinates:
+6
 The length of line is :2.23606797749979
+The length of line-2 is :5.656854249492381
+The line lengths are not equal
 
  
  */
