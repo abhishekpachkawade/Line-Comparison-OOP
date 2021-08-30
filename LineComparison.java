@@ -82,14 +82,23 @@ class LengthOfLine{
         
      // printing the value of length of line is distance2
         System.out.println("The length of line-2 is :"+ lengthOfLine2);
+        String myStr1 = Double.toString(lengthOfLine1);
+        String myStr2 = Double.toString(lengthOfLine2);
+        
+        //comparing to MyStr1 to MyStr2
+        System.out.println(myStr1.compareTo(myStr2));
         
         //if else condition
-            if( lengthOfLine1 ==  lengthOfLine2){
-                System.out.println("The line lengths are equal");
-             }
-             else {
-                System.out.println("The line lengths are not equal");
-             }
+        if(myStr1.compareTo(myStr2) ==0){
+            System.out.println("The line lengths are equal");
+            }
+        else //nested if else condition  
+        	if(myStr1.compareTo(myStr2) >0) {
+            System.out.println("The Line1 length is greater than Line2 length");
+        }
+        	else {
+            System.out.println("The Line1 length is smaller than Line2 length");
+        	}
 
 	}
 
@@ -118,8 +127,8 @@ Enter b2 coordinates:
 6
 The length of line is :2.23606797749979
 The length of line-2 is :5.656854249492381
-The line lengths are not equal
-
+-3
+The Line1 length is smaller than Line2 length
  
  */
 
